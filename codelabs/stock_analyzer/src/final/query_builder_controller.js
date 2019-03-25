@@ -120,7 +120,7 @@ QueryBuilderController.prototype.populateUi_ = function(queryResults) {
   // industry sector.
   var defaultSelection = this.scope_.searchMode == 'Sectors' ?
       'Technology' : 'GOOG';
-  if (this.dropDownList.indexOf(defaultSelection) != -1) {
+  if (this.dropDownList.includes(defaultSelection)) {
     this.scope_.itemSelection = defaultSelection;
     this.search();
   }
