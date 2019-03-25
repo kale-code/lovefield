@@ -298,7 +298,7 @@ function generateDetails(id) {
             if (cursor2) {
               var value = cursor2.value;
               // Can use binary search here.
-              if (ids.indexOf(value['id']) != -1) {
+              if (ids.includes(value['id'])) {
                 results.push(value);
               }
               cursor2.continue();
